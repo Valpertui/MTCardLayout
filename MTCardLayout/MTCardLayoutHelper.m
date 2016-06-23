@@ -92,7 +92,10 @@ static NSString * const kContentOffsetKeyPath = @"contentOffset";
     if (![layout isKindOfClass:[MTCardLayout class]]) {
       return;
     }
-    if (layout.effects.touchToCollapseCard == true && self.viewMode == MTCardLayoutViewModePresenting) {
+    if (self.viewMode == MTCardLayoutViewModePresenting) {
+        if (layout.effects.touchToCollapseCard == false) {
+            return;
+        }
         [self.collectionView setViewMode:MTCardLayoutViewModeDefault animated:YES completion:nil];
         NSArray *selectedIndexPaths = [self.collectionView indexPathsForSelectedItems];
         [selectedIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * indexPath, NSUInteger idx, BOOL *stop) {
