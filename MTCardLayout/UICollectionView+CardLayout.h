@@ -9,5 +9,6 @@
 
 - (void)selectAndNotifyDelegate:(NSIndexPath *)indexPath;
 - (void)deselectAndNotifyDelegate:(NSIndexPath *)indexPath;
+- (void)cardLayoutCleanup;
 
 @end

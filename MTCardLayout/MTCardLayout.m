@@ -1,10 +1,6 @@
 #import "MTCardLayout.h"
 #import "UICollectionView+CardLayout.h"
 
-@interface UICollectionView (CardLayoutPrivate)
-- (void)cardLayoutCleanup;
-@end
-
 @interface MTCardLayout ()
 
 @end
